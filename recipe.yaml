@@ -1,0 +1,58 @@
+version: "1.0.0"
+
+metadata:
+  name: "recipe-maker"
+  description: "This flow generates a recipe based on the food/recipe name and the desired style (e.g., cuisine type or dietary preference)."
+  author: "two-seven"
+  tags: [food, recipe, cooking]
+  private: false
+
+inputs:
+  recipe:
+    type: string
+    description: "The name of the food or recipe you want to make (e.g., pasta, pancakes)."
+    required: true
+    example: "pasta"
+  style:
+    type: string
+    description: "The style or type of cuisine/dietary preference (e.g., Italian, vegan, gluten-free)."
+    required: true
+    example: "Italian"
+
+model:
+  provider: "openai"
+  name: "gpt-4o"
+
+prompt: |
+  You are a professional chef and recipe creator. Generate a detailed recipe for {recipe} in the style of {style}. 
+  Include the following sections:
+  1. Ingredients: List all the ingredients required.
+  2. Instructions: Provide step-by-step instructions for preparing the dish.
+  3. Serving Suggestions: Suggest how to serve or pair the dish.
+  4. Tips: Offer any additional tips or variations for the recipe.
+
+  Ensure the recipe is clear, easy to follow, and tailored to the specified style.
+
+readme: |
+  # Recipe Maker Flow
+
+  This flow generates a recipe based on two inputs:
+  1. **Food/Recipe Name**: The name of the dish you want to make (e.g., pasta, pancakes).
+  2. **Style**: The cuisine type or dietary preference (e.g., Italian, vegan, gluten-free).
+
+  ## How It Works
+  - The flow uses a powerful AI model to create a detailed recipe tailored to your inputs.
+  - Simply provide the food/recipe name and the desired style, and the flow will generate a complete recipe for you.
+
+  ## Example Inputs
+  - Food/Recipe Name: "pasta"
+  - Style: "Italian"
+
+  ## Output
+  The flow will generate a recipe with the following sections:
+  - Ingredients
+  - Instructions
+  - Serving Suggestions
+  - Tips
+
+  Enjoy cooking!
