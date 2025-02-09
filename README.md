@@ -2,8 +2,9 @@
 
 Welcome to **Recipe Wizard**, a web application that generates delicious recipes based on your input! Whether you're craving a chocolate cake or a vegan curry, Recipe Wizard has got you covered. Simply tell us what you want to cook and the cuisine style, and we'll provide you with a detailed recipe.
 
-![Recipe Wizard Screenshot](https://via.placeholder.com/800x400.png?text=Recipe+Wizard+Screenshot)  
-*(Replace this with an actual screenshot of your app)*
+![Recipe Wizard Screenshot](![image](https://github.com/user-attachments/assets/acbf5e37-864f-455f-8354-96e6cc7e17ff)
+)  
+
 
 ---
 
@@ -21,7 +22,7 @@ Welcome to **Recipe Wizard**, a web application that generates delicious recipes
 - **Frontend**: HTML, CSS, JavaScript
 - **Backend**: Flask (Python)
 - **API**: Mira API (for recipe generation)
-- **Deployment**: Render, Heroku, or any other cloud platform
+- **Deployment**: pending
 
 ---
 
@@ -52,3 +53,35 @@ Welcome to **Recipe Wizard**, a web application that generates delicious recipes
    ```bash
    git clone https://github.com/your-username/recipe-wizard.git
    cd recipe-wizard
+
+    Set Up a Virtual Environment (Optional but recommended):
+    bash
+    Copy
+
+    python -m venv venv
+    source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+    Install Dependencies:
+    bash
+    Copy
+
+    pip install -r requirements.txt
+
+    Set Up Environment Variables:
+
+        Create a .env.ok file in the root directory.
+
+        Add your Mira API key:
+        plaintext
+        Copy
+
+        MIRA_API_KEY=your_mira_api_key_here
+
+    Run the Application:
+    bash
+    Copy
+
+    python app.py
+
+    Access the App:
+    Open your browser and go to http://127.0.0.1:5000/.
